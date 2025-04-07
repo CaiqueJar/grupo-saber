@@ -6,6 +6,12 @@ import SegundaEtapa from './components/cadastro/SegundaEtapa';
 import ConfirmacaoCadastro from './components/cadastro/ConfirmacaoCadastro';
 // Importando o novo componente simplificado
 import EnderecoTemp from './components/cadastro/EnderecoTemp';
+import LoginEmail from './components/autenticacao/LoginEmail';
+import AutenticacaoSms from "./components/autenticacao/LoginSMS";
+
+
+
+
 
 function App() {
   const [dadosUsuario, setDadosUsuario] = useState({
@@ -43,6 +49,8 @@ function App() {
           } />
           {/* Usando o novo componente temporário */}
           <Route path="/cadastro-endereco" element={<EnderecoTemp />} />
+          <Route path="/login-email" element={<LoginEmail />} />
+          <Route path="/login-sms" element={<AutenticacaoSms />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
