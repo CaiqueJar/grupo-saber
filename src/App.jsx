@@ -8,6 +8,15 @@ import EnderecoTemp from './components/cadastro/EnderecoTemp';
 import LoginEmail from './components/autenticacao/LoginEmail';
 import AutenticacaoSms from "./components/autenticacao/LoginSMS";
 import CadastroRestaurante from './components/CadastroRestaurante/CadastroRestaurante';
+import CadastroRestauranteDados from './components/cadastroRestaurante/CadastroRestauranteDados';
+import VerificacaoEmailRestaurante from './components/cadastroRestaurante/VerificacaoEmailRestaurante';
+import CadastroEnderecoRestaurante from "./components/cadastroRestaurante/CadastroEnderecoRestaurante";
+import VerificacaoCNPJ from "./components/cadastroRestaurante/VerificacaoCNPJ";
+import EspecialidadeRestaurante from "./components/cadastroRestaurante/EspecialidadeRestaurante";
+
+
+
+
 
 function App() {
   const [dadosUsuario, setDadosUsuario] = useState({
@@ -66,6 +75,29 @@ function App() {
               dadosRestaurante={dadosRestaurante}
               atualizarDados={atualizarDadosRestaurante}
             />
+          } />
+
+          <Route path="/cadastro-restaurante-dados" element={
+            <CadastroRestauranteDados
+              dadosRestaurante={dadosRestaurante}
+              atualizarDados={atualizarDadosRestaurante}
+            />
+          } />
+
+          <Route path="/verificacao-email-restaurante" element={
+            <VerificacaoEmailRestaurante dadosRestaurante={dadosRestaurante} />
+          } />
+
+          <Route path="/cadastro-endereco-restaurante" element={
+            <CadastroEnderecoRestaurante dadosRestaurante={dadosRestaurante} />
+          } />
+
+          <Route path="/verificacao-cnpj" element={
+            <VerificacaoCNPJ dadosRestaurante={dadosRestaurante} />
+          } />
+
+          <Route path="/cadastro/restaurante/proxima-etapa" element={
+            <EspecialidadeRestaurante dadosRestaurante={dadosRestaurante} />
           } />
         </Routes>
       </BrowserRouter>
