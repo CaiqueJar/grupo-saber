@@ -13,6 +13,9 @@ import VerificacaoEmailRestaurante from './components/cadastroRestaurante/Verifi
 import CadastroEnderecoRestaurante from "./components/cadastroRestaurante/CadastroEnderecoRestaurante";
 import VerificacaoCNPJ from "./components/cadastroRestaurante/VerificacaoCNPJ";
 import EspecialidadeRestaurante from "./components/cadastroRestaurante/EspecialidadeRestaurante";
+import FinalizacaoCadastro from "./components/cadastroRestaurante/FinalizacaoCadastro";
+import CadastroSenha from "./components/cadastroRestaurante/CadastroSenha";
+import HorarioFuncionamento from "./components/cadastroRestaurante/HorarioFuncionamento";
 
 
 
@@ -98,6 +101,18 @@ function App() {
 
           <Route path="/cadastro/restaurante/proxima-etapa" element={
             <EspecialidadeRestaurante dadosRestaurante={dadosRestaurante} />
+          } />
+
+          <Route path="/finalizacao-cadastro" element={
+            <FinalizacaoCadastro dadosRestaurante={dadosRestaurante} />
+          } />
+
+          <Route path="/cadastrar-senha" element={
+            <CadastroSenha dadosRestaurante={dadosRestaurante} />
+          } />
+
+          <Route path="/horario-funcionamento" element={
+            <HorarioFuncionamento dadosRestaurante={dadosRestaurante} />
           } />
         </Routes>
       </BrowserRouter>

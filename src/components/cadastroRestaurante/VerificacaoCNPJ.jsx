@@ -37,7 +37,7 @@ import {
           textAlign="center"
         >
           {/* Barra de progresso fake */}
-          <Progress value={55} size="xs" colorScheme="red" borderRadius="full" mb={6} />
+          <Progress value={55} size="xs" colorScheme="yellow" borderRadius="full" mb={6} />
   
           <Text fontSize="2xl" fontWeight="bold" mb={2}>
             A sua loja possui CNPJ?
